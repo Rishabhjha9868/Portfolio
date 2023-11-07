@@ -28,5 +28,81 @@
         </div>
       </div>
     </div>
+    <!-- -------------------------------------About------------------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae omnis assumenda culpa nisi reprehenderit, temporibus
+              excepturi dicta soluta distinctio consequuntur quia similique
+              maiores totam quis vitae inventore harum sequi in! Commodi harum,
+              cum corporis amet dolor quos fugit eveniet deserunt nesciunt
+              officiis sint possimus minima itaque quaerat dolorum labore
+              quibusdam hic alias. Non exercitationem itaque corporis asperiores
+              animi, voluptatem accusamus facere perferendis odit reiciendis
+              provident inventore numquam necessitatibus dolor rem blanditiis
+              earum! Nesciunt, esse officiis!
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')"">Experience</p>
+              <p class="tab-links" onclick="opentab('education')"">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br />Web App Development</li>
+                <li>
+                  <span>App Development</span><br />Building Android/ios apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2021- Current</span><br />UI/UX Design Training at ET
+                  Institute
+                </li>
+                <li><span>2019 - 2021</span><br />Team lead at Starapp LLC.</li>
+                <li>
+                  <span>2017 - 2019</span><br />UI/UX Design Executive at coin
+                  Digital Ltd.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2016</span><br />UI/UX Design Training at ET Institute
+                </li>
+                <li><span>2016</span><br />MBA from MIT Banglore.</li>
+                <li><span>2014</span><br />BBA from ISM Banglore</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
